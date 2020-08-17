@@ -1,13 +1,15 @@
 <p>
   Start editing to see some magic happen :)
 </p>
-<!-- <my-card
+<my-card
   id="my-id"
   header="My header"
   body="My body"
-  [selected]="selectedId === 'my-id'"
+  
   (open)="onOpen('my-id')"
-></my-card> -->
+></my-card>
+
+<!-- [selected]="selectedId === 'my-id'" -->
 
 <my-card
   *ngFor="let item of data"
