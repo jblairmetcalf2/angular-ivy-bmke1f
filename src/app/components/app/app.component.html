@@ -1,8 +1,23 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+<!-- <my-card
+  id="my-id"
+  header="My header"
+  body="My body"
+  [selected]="selectedId === 'my-id'"
+  (open)="onOpen('my-id')"
+></my-card> -->
+
 <my-card
-  header="Caryn is rad!"
-  body="Jehnean is swell!"
-  (open)="onOpen()"
+  *ngFor="let item of data"
+  [header]="item.header"
+  [body]="item.body"
+  [id]="item.id"
 ></my-card>
+
+<!--
+  [selected]="selected === item.id"
+  (select)="onCardSelect($event)"
+  (deselect)="onCardDeselect($event)"
+  (open)="modalRef.open($event, item.header, item.body, item.id)" -->
