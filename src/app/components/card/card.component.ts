@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'my-card',
@@ -6,13 +6,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: [ './card.component.scss' ]
 })
 export class CardComponent {
-  @Input()
-  public header = 'My fancy header';
+  @Input() header
+  @Input() body;
 
-  @Input()
-  public body = 'My schmancy paragraph';
+  @Output() open = new EventEmitter();
 
   public onOpenClick() {
-    console.log('Hola!');
+    console.log('Hola from CardComponent!');
+    this.open.emit();
   }
 }
