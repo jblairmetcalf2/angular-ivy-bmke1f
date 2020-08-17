@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: [ './card.component.scss' ]
 })
 export class CardComponent {
-  @Input() header
+  @Input() header;
   @Input() body;
 
   @Output() open = new EventEmitter();
