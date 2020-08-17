@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'my-card',
@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: [ './card.component.scss' ]
 })
 export class CardComponent {
+  @Input()
   public header = 'My fancy header';
+
+  @Input()
   public body = 'My schmancy paragraph';
 
   public onOpenClick() {
