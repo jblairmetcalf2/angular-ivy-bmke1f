@@ -10,7 +10,7 @@ import { IUser } from '../../interfaces';
   styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent {
-  public data: IUser[];
+  public data: IUser[] = DATA;
 
   public selected;
 
